@@ -51,3 +51,18 @@ at. Maybe my first solution was just too overcomplicated when the basics work.
 Finding the `chunk()` method on the `Vec<>` type was also quite nice here.
 Really saved some work in having to have another loop going through three
 items at a time and keeping track of indexes.
+
+## Day 4
+This puzzle was pretty easy to come up with a solution for, but oh boy do I
+hate how I wrote the code. The `parse_sections_to_u32s()` function is rather
+verbose and returning a tuple of tuples seems a little gross, but it works.
+This may be another one I come back to at the end and try to rework to cleaner
+code with a better understanding of Rust.
+
+The expressions I use in the two `filter()` calls are quite obnoxious as well.
+Again, it works which is good, but I'd like to clean it up. There may be a way
+to just turn them into simple ranges and use or write a function that checks if
+a range contains or overlaps another. That sounds nice - I'll definitely be
+coming back to this one. I think ideally I will just come back to the beginning
+and go through each day again once I've completed all 25 and work on cleaning
+one up with new knowledge or by researching cleaner solutions.
