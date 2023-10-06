@@ -6,7 +6,7 @@ fn main() {
     println!("Advent of Code 2022");
     println!("===================");
 
-    let day = 2;
+    let day = 3;
     let input = fs::read_to_string(format!("inputs/day{day}.txt")).unwrap();
 
     if let Some(solver) = init_solver(day) {

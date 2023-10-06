@@ -2,30 +2,24 @@ use crate::Solver;
 
 pub struct Day01 {}
 
-impl Day01 {
-    fn calories_per_elf(&self, input: &str) -> Vec<u32> {
-        input
-            .split("\n\n")
-            .map(|elf| {
-                elf.lines()
-                    .map(|cals| cals.parse::<u32>().unwrap())
-                    .sum::<u32>()
-            })
-            .collect()
-    }
+fn calories_per_elf(input: &str) -> Vec<u32> {
+    input
+        .split("\n\n")
+        .map(|elf| {
+            elf.lines()
+                .map(|cals| cals.parse::<u32>().unwrap())
+                .sum::<u32>()
+        })
+        .collect()
 }
 
 impl Solver for Day01 {
     fn star_one(&self, input: &str) -> String {
-        self.calories_per_elf(input)
-            .iter()
-            .max()
-            .unwrap()
-            .to_string()
+        calories_per_elf(input).iter().max().unwrap().to_string()
     }
 
     fn star_two(&self, input: &str) -> String {
-        let mut calories_per_elf = self.calories_per_elf(input);
+        let mut calories_per_elf = calories_per_elf(input);
         calories_per_elf.sort();
 
         calories_per_elf

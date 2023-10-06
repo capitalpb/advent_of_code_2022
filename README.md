@@ -35,3 +35,19 @@ outcomes in both scenarios. There is probably a more programatic way of doing
 the calculation, but oh well. This way works and gets me 2 stars closer to
 completion. I may revisit this one at a later date and find a more elegant
 approach.
+
+## Day 3
+Wow. What feels like a pretty simple problem has turned into a convoluted
+mess of code. I originally tried Part 1 by splitting the string in half and
+converting each half into a `HashSet` so I could use the `intersection()`
+method to find the shared character. This ended up turning into a mess of
+dereferencing and odd code that was not pleasant to look at. I might just be
+too lacking in my understanding of Rust at this point to pull that solution off
+cleanly. Maybe I'll come back to it later and try again.
+
+Using a simple for loop to check the characters turned out much nicer to look
+at. Maybe my first solution was just too overcomplicated when the basics work.
+
+Finding the `chunk()` method on the `Vec<>` type was also quite nice here.
+Really saved some work in having to have another loop going through three
+items at a time and keeping track of indexes.
