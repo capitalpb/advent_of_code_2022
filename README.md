@@ -66,3 +66,10 @@ a range contains or overlaps another. That sounds nice - I'll definitely be
 coming back to this one. I think ideally I will just come back to the beginning
 and go through each day again once I've completed all 25 and work on cleaning
 one up with new knowledge or by researching cleaner solutions.
+
+## Day 5
+Holy cow. My initial run at this is just hideous code to me. It works, but oh
+boy do I hate looking at it. I think a lot of this is probably just my
+inexperience in the language showing. There are probably much easier and more
+idiomatic ways of writing this one. This definitely solidifies my plan of
+looping back around at the end and taking the time to clean each of these up.
