@@ -73,3 +73,13 @@ boy do I hate looking at it. I think a lot of this is probably just my
 inexperience in the language showing. There are probably much easier and more
 idiomatic ways of writing this one. This definitely solidifies my plan of
 looping back around at the end and taking the time to clean each of these up.
+
+## Day 6
+I enjoyed this one. It was a nice simple break after the mess I wrote for Day
+5. The only setback was that I was trying to create a `HashSet` from the
+windows, but the type checker wouldn't allow it. After some research about
+different types I found that `char` doesn't implement the right trait to be
+hashable, but it does work in a `BTreeSet`. Once I had the right type to use
+for my set this was a piece of cake. The `windows()` function that is akin to
+the `chunk()` function I used in day 3 made this a quite simple and nice piece
+of code to write.
