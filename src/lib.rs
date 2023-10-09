@@ -2,6 +2,7 @@ mod solvers;
 
 use crate::solvers::{
     day01::Day01, day02::Day02, day03::Day03, day04::Day04, day05::Day05, day06::Day06,
+    day07::Day07,
 };
 
 pub trait Solver {
@@ -17,6 +18,7 @@ pub fn init_solver(day: u8) -> Option<Box<dyn Solver>> {
         4 => Some(Box::new(Day04 {})),
         5 => Some(Box::new(Day05 {})),
         6 => Some(Box::new(Day06 {})),
+        7 => Some(Box::new(Day07 {})),
         _ => None,
     }
 }
