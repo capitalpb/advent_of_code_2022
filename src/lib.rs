@@ -1,9 +1,6 @@
 mod solvers;
 
-use crate::solvers::{
-    day01::Day01, day02::Day02, day03::Day03, day04::Day04, day05::Day05, day06::Day06,
-    day07::Day07,
-};
+use crate::solvers::*;
 
 pub trait Solver {
     fn star_one(&self, input: &str) -> String;
@@ -12,13 +9,14 @@ pub trait Solver {
 
 pub fn init_solver(day: u8) -> Option<Box<dyn Solver>> {
     match day {
-        1 => Some(Box::new(Day01 {})),
-        2 => Some(Box::new(Day02 {})),
-        3 => Some(Box::new(Day03 {})),
-        4 => Some(Box::new(Day04 {})),
-        5 => Some(Box::new(Day05 {})),
-        6 => Some(Box::new(Day06 {})),
-        7 => Some(Box::new(Day07 {})),
+        1 => Some(Box::new(day01::Day01 {})),
+        2 => Some(Box::new(day02::Day02 {})),
+        3 => Some(Box::new(day03::Day03 {})),
+        4 => Some(Box::new(day04::Day04 {})),
+        5 => Some(Box::new(day05::Day05 {})),
+        6 => Some(Box::new(day06::Day06 {})),
+        7 => Some(Box::new(day07::Day07 {})),
+        8 => Some(Box::new(day08::Day08 {})),
         _ => None,
     }
 }

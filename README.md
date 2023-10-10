@@ -76,13 +76,8 @@ looping back around at the end and taking the time to clean each of these up.
 
 ## Day 6
 I enjoyed this one. It was a nice simple break after the mess I wrote for Day
-5. The only setback was that I was trying to create a `HashSet` from the
-windows, but the type checker wouldn't allow it. After some research about
-different types I found that `char` doesn't implement the right trait to be
-hashable, but it does work in a `BTreeSet`. Once I had the right type to use
-for my set this was a piece of cake. The `windows()` function that is akin to
-the `chunk()` function I used in day 3 made this a quite simple and nice piece
-of code to write.
+5. The `windows()` function that is akin to the `chunk()` function I used in
+day 3 made this a quite simple and nice piece of code to write.
 
 ## Day 7
 I struggled hard for the first time here. The test case was passing, but no
@@ -96,7 +91,11 @@ directories to the set on `dir` lines instead of just when adding files, I got
 the correct answer. Silly me. Gotta love spending a few hours on a silly little
 slip-up. That's coding I guess.
 
-
 I don't know that I necessarily love the code here, but again, I am excited to
 come back through at the end and look into tidier solutions. I should stop
 adding this comment every day now that I just know it's going to happen.
+
+## Day 8
+Not the most elegant code I've ever written, but it was simple and gets the job
+done. Not much to say about this one. A nice simple break after day 7 though
+that's for sure.
