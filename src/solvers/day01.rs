@@ -1,6 +1,6 @@
 use crate::Solver;
 
-pub struct Day01 {}
+pub struct Day01;
 
 fn calories_per_elf(input: &str) -> Vec<u32> {
     input

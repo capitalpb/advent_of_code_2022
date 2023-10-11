@@ -1,6 +1,6 @@
 use crate::Solver;
 
-pub struct Day05 {}
+pub struct Day05;
 
 fn parse_input(input: &str) -> (Vec<Vec<char>>, &str) {
     let (starting_stacks, instructions) = input.split_once("\n\n").unwrap();

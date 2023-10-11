@@ -2,7 +2,7 @@ use std::collections::HashMap;
 
 use crate::Solver;
 
-pub struct Day07 {}
+pub struct Day07;
 
 type Directories = HashMap<String, HashMap<String, usize>>;
 

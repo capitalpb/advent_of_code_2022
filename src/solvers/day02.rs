@@ -1,6 +1,6 @@
 use crate::Solver;
 
-pub struct Day02 {}
+pub struct Day02;
 
 impl Solver for Day02 {
     fn star_one(&self, input: &str) -> String {

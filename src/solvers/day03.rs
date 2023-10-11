@@ -1,6 +1,6 @@
 use crate::Solver;
 
-pub struct Day03 {}
+pub struct Day03;
 
 fn item_priority(item: char) -> u32 {
     (item as u32) - (if item.is_uppercase() { 38 } else { 96 })
