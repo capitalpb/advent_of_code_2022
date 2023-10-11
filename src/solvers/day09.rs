@@ -8,7 +8,7 @@ impl Solver for Day09 {
     fn star_one(&self, input: &str) -> String {
         let mut head_pos = (0, 0);
         let mut tail_pos = (0, 0);
-        let visited_by_tail = HashSet::from([tail_pos]);
+        let mut visited_by_tail = HashSet::from([tail_pos]);
 
         for instruction in input.lines() {
             let (direction, steps) = instruction.split_once(' ').unwrap();
@@ -26,7 +26,41 @@ impl Solver for Day09 {
                 let x_diff = head_pos.0 - tail_pos.0;
                 let y_diff = head_pos.1 - tail_pos.1;
 
-                // calculate tail movement
+                if x_diff == 2 && y_diff == 0 {
+                    tail_pos.0 += 1;
+                } else if x_diff == -2 && y_diff == 0 {
+                    tail_pos.0 -= 1;
+                } else if y_diff == 2 && x_diff == 0 {
+                    tail_pos.1 += 1;
+                } else if y_diff == -2 && x_diff == 0 {
+                    tail_pos.1 -= 1;
+                } else if x_diff == 2 && y_diff == 1 {
+                    tail_pos.0 += 1;
+                    tail_pos.1 += 1;
+                } else if x_diff == 2 && y_diff == -1 {
+                    tail_pos.0 += 1;
+                    tail_pos.1 -= 1;
+                } else if x_diff == -2 && y_diff == 1 {
+                    tail_pos.0 -= 1;
+                    tail_pos.1 += 1;
+                } else if x_diff == -2 && y_diff == -1 {
+                    tail_pos.0 -= 1;
+                    tail_pos.1 -= 1;
+                } else if y_diff == 2 && x_diff == 1 {
+                    tail_pos.0 += 1;
+                    tail_pos.1 += 1;
+                } else if y_diff == 2 && x_diff == -1 {
+                    tail_pos.0 -= 1;
+                    tail_pos.1 += 1;
+                } else if y_diff == -2 && x_diff == 1 {
+                    tail_pos.0 += 1;
+                    tail_pos.1 -= 1;
+                } else if y_diff == -2 && x_diff == -1 {
+                    tail_pos.0 -= 1;
+                    tail_pos.1 -= 1;
+                }
+
+                visited_by_tail.insert(tail_pos);
             }
         }
 
