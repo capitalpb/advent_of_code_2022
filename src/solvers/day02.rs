@@ -51,13 +51,13 @@ B X
 C Z";
 
     #[test]
-    fn test_day02_star1() {
+    fn test_star_one() {
         let solver = Day02 {};
         assert_eq!(solver.star_one(TEST_DATA), "15");
     }
 
     #[test]
-    fn test_day02_star2() {
+    fn test_star_two() {
         let solver = Day02 {};
         assert_eq!(solver.star_two(TEST_DATA), "12");
     }
