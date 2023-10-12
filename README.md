@@ -123,3 +123,12 @@ ended up with the version I have now using `abs()` and division, which
 significantly cut down on the code, and is much cleaner to look at. Then I just
 popped my star two code into it's own function, added a parameter for the knot
 count, and reused it for both stars. I enjoyed this one.
+
+## Day 10
+Tried this one a few different ways at first, and kept running into trouble.
+Trying to process the CPU an instruction at a time and keeping one x variable
+updated just wasn't working for me the way I wanted. Once I switched over to
+just making a vector of `x`'s value at every cycle, solving the problems was
+quite simple. This might not be the most efficient way of doing things, and I'm
+sure with some more time I could have figured out a better way, but hey, it
+works and it's quick enough for me.
