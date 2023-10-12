@@ -83,7 +83,8 @@ looping back around at the end and taking the time to clean each of these up.
 
 ## Day 6
 
-I enjoyed this one. It was a nice simple break after the mess I wrote for Day 5. The `windows()` function that is akin to the `chunk()` function I used in
+I enjoyed this one. It was a nice simple break after the mess I wrote for Day
+5. The `windows()` function that is akin to the `chunk()` function I used in
 day 3 made this a quite simple and nice piece of code to write.
 
 ## Day 7
@@ -111,8 +112,14 @@ that's for sure.
 
 ## Day 9
 
-Doing star one, I took a couple shots at the algorithm for moving the tail, but
-overall not too difficult today. I hate the giant if/else statement, and could
-probably easily shorten this to a match or some kind of calculation to do the
-math way easier, but it works for now, so I'll leave it until I loop back
-around.
+This one wasn't too tricky to solve, but writing the code to move the tail was
+a bit of a process. At first I had a giant disgusting if/else if block covering
+every possible combination of `x_diff` and `y_diff` being `-2`, `2`, `0`, `1`
+or `-1`. It worked for star one, but I hated looking at it. Once I realized
+star two could be written as the exact same code, just with one extra loop to
+compare each knot to the previous as opposed to just two variables for the head
+and tail, I took the opportunity to try and rewrite the code to be cleaner. I
+ended up with the version I have now using `abs()` and division, which
+significantly cut down on the code, and is much cleaner to look at. Then I just
+popped my star two code into it's own function, added a parameter for the knot
+count, and reused it for both stars. I enjoyed this one.
