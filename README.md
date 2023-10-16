@@ -83,8 +83,7 @@ looping back around at the end and taking the time to clean each of these up.
 
 ## Day 6
 
-I enjoyed this one. It was a nice simple break after the mess I wrote for Day
-5. The `windows()` function that is akin to the `chunk()` function I used in
+I enjoyed this one. It was a nice simple break after the mess I wrote for Day 5. The `windows()` function that is akin to the `chunk()` function I used in
 day 3 made this a quite simple and nice piece of code to write.
 
 ## Day 7
@@ -125,6 +124,7 @@ popped my star two code into it's own function, added a parameter for the knot
 count, and reused it for both stars. I enjoyed this one.
 
 ## Day 10
+
 Tried this one a few different ways at first, and kept running into trouble.
 Trying to process the CPU an instruction at a time and keeping one x variable
 updated just wasn't working for me the way I wanted. Once I switched over to
@@ -132,3 +132,30 @@ just making a vector of `x`'s value at every cycle, solving the problems was
 quite simple. This might not be the most efficient way of doing things, and I'm
 sure with some more time I could have figured out a better way, but hey, it
 works and it's quick enough for me.
+
+## Day 11
+
+Part one here wasn't too bad. The difficulty in getting it done wasn't the
+logic, but working around the Rust language features that I'm not used to.
+Specifically the borrow checker. What in my mind was a simple
+`for monkey in monkies` loop became index based, because since I was borrowing
+the variable in the loop, I couldn't reborrow it inside the loop to access
+the other monkies in the array. I also had a second fight with the borrow
+when performing the test on the items, because I couldn't reference the
+`monkies` vector in an if statement, and then access it again inside that
+statement. This just made me pop some values into values before I performed
+the logic. Nothing too difficult, just some learning and reworking how I
+instinctually wanted to write the code.
+
+For part two I just had to straight up seek out the answer. The "hints", if
+you even want to call them that, were so vague and my skills don't necessarily
+lie in coming up with mathematical solutions like this, so I didn't even have
+any idea of where to start. I tried increasing from `i32` to `i64`, and then
+even up to `i128`, but the numbers were still too large. Having no idea how
+to come up with the mathematical answer for this one, I just gave up and looked
+up a solution. It made sense when I read it, but I never would have come up
+with it on my own.
+
+Also wanted to mention how much I hate my `Monkey::from()` function to parse
+the input, but it works so whatever. Maybe that'll be a refactor in my second
+pass.
