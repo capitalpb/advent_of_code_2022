@@ -33,13 +33,13 @@ fn parse_input(input: &str) -> (Vec<Vec<char>>, &str) {
 
 fn parse_instruction(instruction: &str) -> Vec<usize> {
     instruction
-        .split(" ")
-        .filter(|s| s.chars().all(|c| c.is_digit(10)))
+        .split(' ')
+        .filter(|s| s.chars().all(|c| c.is_ascii_digit()))
         .map(|s| s.parse::<usize>().unwrap())
         .collect()
 }
 
-fn get_stack_tops(stacks: &Vec<Vec<char>>) -> String {
+fn get_stack_tops(stacks: &[Vec<char>]) -> String {
     stacks.iter().filter_map(|stack| stack.last()).collect()
 }
 

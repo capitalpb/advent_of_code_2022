@@ -6,7 +6,7 @@ pub struct Day09;
 
 fn solve(input: &str, knot_count: usize) -> String {
     let mut knots = vec![(0, 0); knot_count];
-    let mut visited_by_tail = HashSet::from([knots.last().unwrap().clone()]);
+    let mut visited_by_tail = HashSet::from([*knots.last().unwrap()]);
 
     for instruction in input.lines() {
         let (direction, steps) = instruction.split_once(' ').unwrap();
@@ -29,7 +29,7 @@ fn solve(input: &str, knot_count: usize) -> String {
                     knots[i].0 += x_diff / 2;
 
                     if y_diff.abs() == 1 {
-                        knots[i].1 += y_diff / 1;
+                        knots[i].1 += y_diff;
                     }
                 }
 
@@ -37,12 +37,12 @@ fn solve(input: &str, knot_count: usize) -> String {
                     knots[i].1 += y_diff / 2;
 
                     if x_diff.abs() == 1 {
-                        knots[i].0 += x_diff / 1;
+                        knots[i].0 += x_diff;
                     }
                 }
             }
 
-            visited_by_tail.insert(knots.last().unwrap().clone());
+            visited_by_tail.insert(*knots.last().unwrap());
         }
     }
 

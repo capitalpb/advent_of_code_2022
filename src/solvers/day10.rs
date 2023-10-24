@@ -6,7 +6,7 @@ fn plot_x_history(input: &str) -> Vec<i32> {
     let mut x_history = vec![1];
 
     for instruction in input.lines() {
-        let x = x_history.last().unwrap().clone();
+        let x = *x_history.last().unwrap();
         x_history.push(x);
 
         if instruction != "noop" {
@@ -41,7 +41,7 @@ impl Solver for Day10 {
         let mut crt_display = String::from("");
 
         for _ in 0..6 {
-            crt_display.push_str("\n");
+            crt_display.push('\n');
 
             for col in 0..40 {
                 crt_display.push_str(if (x_history[cycle] - col).abs() < 2 {

@@ -33,7 +33,7 @@ impl Monkey {
             .split_once("= ")
             .unwrap()
             .1
-            .split(" ")
+            .split(' ')
             .collect();
 
         let operation = operation_parts[1].chars().nth(0).unwrap();
@@ -43,7 +43,7 @@ impl Monkey {
         let test_divisor = lines
             .next()
             .unwrap()
-            .split(" ")
+            .split(' ')
             .last()
             .unwrap()
             .parse::<i64>()
@@ -52,7 +52,7 @@ impl Monkey {
         let throw_if_true = lines
             .next()
             .unwrap()
-            .split(" ")
+            .split(' ')
             .last()
             .unwrap()
             .parse::<usize>()
@@ -61,7 +61,7 @@ impl Monkey {
         let throw_if_false = lines
             .next()
             .unwrap()
-            .split(" ")
+            .split(' ')
             .last()
             .unwrap()
             .parse::<usize>()

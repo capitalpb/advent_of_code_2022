@@ -25,7 +25,7 @@ impl Solver for Day04 {
     fn star_one(&self, input: &str) -> String {
         input
             .lines()
-            .map(|pair| parse_sections_to_u32s(pair))
+            .map(parse_sections_to_u32s)
             .filter(|pair| {
                 (pair.0 .0 >= pair.1 .0 && pair.0 .1 <= pair.1 .1)
                     || (pair.1 .0 >= pair.0 .0 && pair.1 .1 <= pair.0 .1)
@@ -37,7 +37,7 @@ impl Solver for Day04 {
     fn star_two(&self, input: &str) -> String {
         input
             .lines()
-            .map(|pair| parse_sections_to_u32s(pair))
+            .map(parse_sections_to_u32s)
             .filter(|pair| {
                 ((pair.0 .0 >= pair.1 .0 || pair.0 .1 >= pair.1 .0) && pair.0 .1 <= pair.1 .1)
                     || ((pair.1 .0 >= pair.0 .0 || pair.1 .1 >= pair.0 .0)
