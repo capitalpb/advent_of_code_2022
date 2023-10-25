@@ -7,7 +7,7 @@ fn calories_per_elf(input: &str) -> Vec<u32> {
         .split("\n\n")
         .map(|elf| {
             elf.lines()
-                .map(|cals| cals.parse::<u32>().unwrap())
+                .filter_map(|cals| cals.parse::<u32>().ok())
                 .sum::<u32>()
         })
         .collect()
